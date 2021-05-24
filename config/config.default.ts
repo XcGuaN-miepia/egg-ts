@@ -1,4 +1,5 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
+import { dbPath } from './config.db';
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -13,6 +14,15 @@ export default (appInfo: EggAppInfo) => {
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
+  };
+
+  config.mongoose = {
+    client: {
+      url: `mongodb://${dbPath}`,
+      options: {
+        useNewUrlParser: true,
+      },
+    },
   };
 
   // the return config will combines to EggAppConfig
