@@ -10,6 +10,10 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-mongoose',
   },
+  apollo: {
+    enable: true,
+    package: '@gaoding/egg-apollo-client',
+  },
 };
 
 export default plugin;

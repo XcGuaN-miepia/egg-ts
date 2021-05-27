@@ -25,37 +25,64 @@ export default (app: Application) => {
   // 映射到egg-mongo db 库的users表中（不区分大小写）
   const User = mongoose.model('Users', UserSchema);
 
-  // init方法放到这里
-  initUserData(User);
+  // // init方法放到这里
+  // initUserData(User);
+  insertUserData(User);
 
   return User;
 };
 
 
-function initUserData(User: Model<any>) {
-  // 查询数据库
-  User.find({}, (err, doc) => {
-    console.log(doc);
-
-    if (err) {
-      console.log(err);
-      console.log('init user failed');
-    } else if (!doc.length) {
-      new User({
-        name: 'UserInitName',
-        age: 23,
-        sex: 'girl',
-        job: '程序媛',
-        lastTime: Date.now(),
-      }).save();
-    } else {
-      console.log('-------------init user successfully--------------');
-    }
-  });
-}
-
-// function insertUserData(User: Model<any>) {
-//   User.insertMany([{
-
-//   }]);
+// function initUserData(User: Model<any>) {
+//   // 查询数据库
+//   User.find({}, (err, doc) => {
+//     if (err) {
+//       console.log(err);
+//       console.log('init user failed');
+//     } else if (!doc.length) {
+//       new User({
+//         name: 'UserInitName',
+//         age: 23,
+//         sex: 'girl',
+//         job: '程序媛',
+//         lastTime: Date.now(),
+//       }).save();
+//     } else {
+//       console.log('-------------init user successfully--------------');
+//     }
+//   });
 // }
+
+function insertUserData(User: Model<any>) {
+  User.insertMany([{
+    name: 'UserInitName',
+    age: 23,
+    sex: 'girl',
+    job: '程序媛',
+    lastTime: Date.now(),
+  }, {
+    name: 'UserInitName',
+    age: 23,
+    sex: 'girl',
+    job: '程序媛',
+    lastTime: Date.now(),
+  }, {
+    name: 'UserInitName',
+    age: 23,
+    sex: 'girl',
+    job: '程序媛',
+    lastTime: Date.now(),
+  }, {
+    name: 'UserInitName',
+    age: 23,
+    sex: 'girl',
+    job: '程序媛',
+    lastTime: Date.now(),
+  }, {
+    name: 'UserInitName',
+    age: 23,
+    sex: 'girl',
+    job: '程序媛',
+    lastTime: Date.now(),
+  }]);
+}
