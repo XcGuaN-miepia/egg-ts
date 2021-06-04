@@ -1,4 +1,4 @@
-module.exports = (apollo, appConfig) => {
+export default (apollo, appConfig) => {
   // 不添加 namespace 前缀的时候，默认使用 application 的配置
   // 如果 application 不包含该配置，则提取 process.env 里面的配置
   // const env = apollo.get('NODE_ENV');

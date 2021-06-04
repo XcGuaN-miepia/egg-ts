@@ -1,5 +1,5 @@
 import { Application } from 'egg';
-import { Model } from 'mongoose';
+// import { Model } from 'mongoose';
 
 export default (app: Application) => {
   const mongoose = app.mongoose;
@@ -27,7 +27,7 @@ export default (app: Application) => {
 
   // // init方法放到这里
   // initUserData(User);
-  insertUserData(User);
+  // insertUserData(User);
 
   return User;
 };
@@ -53,36 +53,36 @@ export default (app: Application) => {
 //   });
 // }
 
-function insertUserData(User: Model<any>) {
-  User.insertMany([{
-    name: 'UserInitName',
-    age: 23,
-    sex: 'girl',
-    job: '程序媛',
-    lastTime: Date.now(),
-  }, {
-    name: 'UserInitName',
-    age: 23,
-    sex: 'girl',
-    job: '程序媛',
-    lastTime: Date.now(),
-  }, {
-    name: 'UserInitName',
-    age: 23,
-    sex: 'girl',
-    job: '程序媛',
-    lastTime: Date.now(),
-  }, {
-    name: 'UserInitName',
-    age: 23,
-    sex: 'girl',
-    job: '程序媛',
-    lastTime: Date.now(),
-  }, {
-    name: 'UserInitName',
-    age: 23,
-    sex: 'girl',
-    job: '程序媛',
-    lastTime: Date.now(),
-  }]);
-}
+// function insertUserData(User: Model<any>) {
+//   User.insertMany([{
+//     name: 'UserInitName',
+//     age: 23,
+//     sex: 'girl',
+//     job: '程序媛',
+//     lastTime: Date.now(),
+//   }, {
+//     name: 'UserInitName',
+//     age: 23,
+//     sex: 'girl',
+//     job: '程序媛',
+//     lastTime: Date.now(),
+//   }, {
+//     name: 'UserInitName',
+//     age: 23,
+//     sex: 'girl',
+//     job: '程序媛',
+//     lastTime: Date.now(),
+//   }, {
+//     name: 'UserInitName',
+//     age: 23,
+//     sex: 'girl',
+//     job: '程序媛',
+//     lastTime: Date.now(),
+//   }, {
+//     name: 'UserInitName',
+//     age: 23,
+//     sex: 'girl',
+//     job: '程序媛',
+//     lastTime: Date.now(),
+//   }]);
+// }
