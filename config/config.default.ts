@@ -16,6 +16,12 @@ export default (appInfo: EggAppInfo) => {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
 
+  config.apollo = {
+    config_server_url: 'http://139.198.186.30:8080/',
+    app_id: 'QFfvaO97odmRj4Iz',
+    init_on_start: true,
+  };
+
   config.mongoose = {
     client: {
       url: `mongodb://${dbPath}`,
