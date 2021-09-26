@@ -23,7 +23,7 @@ export default (appInfo: EggAppInfo) => {
 
   config.mongoose = {
     client: {
-      url: 'mongodb://mongo:27017',
+      url: 'mongodb://127.0.0.1:27017',
       options: {
         useNewUrlParser: true,
         auth: {
