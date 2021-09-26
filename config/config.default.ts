@@ -1,5 +1,4 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
-import { dbPath } from './config.db';
 
 export default (appInfo: EggAppInfo) => {
   const config = {} as PowerPartial<EggAppConfig>;
@@ -24,9 +23,13 @@ export default (appInfo: EggAppInfo) => {
 
   config.mongoose = {
     client: {
-      url: `mongodb://${dbPath}`,
+      url: 'mongodb://mongo:27017',
       options: {
         useNewUrlParser: true,
+        auth: {
+          user: 'root',
+          password: 'example',
+        },
       },
     },
   };
