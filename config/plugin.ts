@@ -14,6 +14,10 @@ const plugin: EggPlugin = {
     enable: true,
     package: '@gaoding/egg-apollo-client',
   },
+  validate: {
+    enable: true,
+    package: 'egg-validate',
+  },
 };
 
 export default plugin;

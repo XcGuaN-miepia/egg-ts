@@ -1,12 +1,13 @@
 // app.ts
-import { Application, IBoot } from 'egg';
+import { IBoot } from 'egg';
+// import { Application, IBoot } from 'egg';
 
 export default class FooBoot implements IBoot {
-  private readonly app: Application;
+  // private readonly app: Application;
 
-  constructor(app: Application) {
-    this.app = app;
-  }
+  // constructor(app: Application) {
+  //   this.app = app;
+  // }
 
   configWillLoad() {
     // Ready to call configDidLoad,
@@ -16,7 +17,6 @@ export default class FooBoot implements IBoot {
 
   configDidLoad() {
     // Config, plugin files have loaded.
-    console.log(this.app.config.mongoose.client);
   }
 
   async didLoad() {

@@ -1,4 +1,4 @@
-// This file is created by egg-ts-helper@1.25.8
+// This file is created by egg-ts-helper@1.25.9
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
@@ -16,6 +16,7 @@ import 'egg-jsonp';
 import 'egg-view';
 import 'egg-mongoose';
 import '@gaoding/egg-apollo-client';
+import 'egg-validate';
 import { EggPluginItem } from 'egg';
 declare module 'egg' {
   interface EggPlugin {
@@ -33,5 +34,6 @@ declare module 'egg' {
     view?: EggPluginItem;
     mongoose?: EggPluginItem;
     apollo?: EggPluginItem;
+    validate?: EggPluginItem;
   }
 }
