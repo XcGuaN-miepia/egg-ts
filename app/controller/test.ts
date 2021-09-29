@@ -19,11 +19,12 @@ export default class TestController extends Controller {
 
   public async add() {
     const { ctx } = this;
+    // JSON.parse('asdsadasdas:Dasdsadsa');
 
     // try {
     ctx.validate({
       id: 'id',
-    }, ctx.request.body);
+    });
 
     ctx.body = {
       code: 0,
